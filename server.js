@@ -17,7 +17,17 @@ app.use(express.static('public'));
 ///routes:
 app.get("/welcome", (req, res)=>{
 	console.log('reached the welcome page');
-
+	/////this should be the real quiz, after confirmed testing:
+	TestQuiz
+	.findOne()
+	.exec()
+	.then(quiz=>{
+		res.json(quiz.map(quiz=>quiz.apiRepr()))
+	})
+	.catch(err=>{
+		console.log(err);
+		res.status(500).json({error:'Oops, something went wrong.'});
+	});
 });
 
 
