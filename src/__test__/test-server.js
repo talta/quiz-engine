@@ -5,9 +5,9 @@ const mongoose = require('mongoose');
 const should = chai.should();
 
 ///internal dependencies:
-const Quiz = require('../models');
-const {runServer, app, closeServer} = require('../server');
-const {DATABASE_URL, TEST_DATABASE_URL} = require('../config');
+const Quiz = require('../../models');
+const {runServer, app, closeServer} = require('../../server');
+const {DATABASE_URL, TEST_DATABASE_URL} = require('../../config');
 
 
 
@@ -66,20 +66,4 @@ function tearDownDb(){
 
 
 
-describe('Quiz', function(){
-	before(function(){
-		runServer(TEST_DATABASE_URL);
-		return seedQuizzesData();
-	});
-	after(function(){
-		tearDownDb();
-		return closeServer();
-	});
-
-	describe('smoke test on node', function(){
-		it('should reach teh database and return anything', function(){
-			let res;
-			
-		}
-	})
-})
+module.exports = {runServer, seedQuizzesData, closeServer, tearDownDb};
