@@ -12,8 +12,6 @@ mongoose.Promise = global.Promise;
 app.use(express.static('public'));
 
 
-
-
 ///routes:
 app.get("/welcome", (req, res)=>{
 	console.log('reached the welcome page');
