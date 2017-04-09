@@ -4,21 +4,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const {chai, expect} =require('chai');
-const chaiHttp = require('chai-http');
-const mongoose = require('mongoose');
-const should = chai.should();
-const app = require('../../server');
+import  {chai, expect} from 'chai';
+import chaiHttp from'chai-http';
+import mongoose from 'mongoose';
+require should = chai.should();
+import app from '../../server';
 
 ///internal dependencies:
 import App from '../App';
-import {runServer, seedQuizzesData, closeServer, tearDownDb} from './test-server';
+import {runServer, seedQuizzesData, closeServer, tearDownDb} from './test.server';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
   ReactDOM.render(<App />, div);
 });
-
 
 
 
@@ -31,6 +30,8 @@ describe('Quiz', function(){
 	// 	tearDownDb();
 	// 	return closeServer();
 	// });
+
+	console.log('helllo world'); 
 
 	describe('smoke test on node', function(){
 		////res was undefined
