@@ -7,7 +7,9 @@ import ReactDOM from 'react-dom';
 import  {chai, expect} from 'chai';
 import chaiHttp from'chai-http';
 import mongoose from 'mongoose';
-require should = chai.should();
+
+////need to better declare this should statement:
+// require should = chai.should();
 import app from '../../server';
 
 ///internal dependencies:

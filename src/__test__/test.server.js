@@ -10,9 +10,7 @@ const {runServer, app, closeServer} = require('../../server');
 const {DATABASE_URL, TEST_DATABASE_URL} = require('../../config');
 
 
-
 chai.use(chaiHttp);
-
 
 
 function seedQuizzesData(){
@@ -67,3 +65,4 @@ function tearDownDb(){
 
 
 module.exports = {runServer, seedQuizzesData, closeServer, tearDownDb};
+
